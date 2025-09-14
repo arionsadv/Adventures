@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Arion's Adventures  | Antigua & Barbuda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/Antigua-and-Barbuda.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #000;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #333;
+        }
+        
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(to bottom right, transparent 49.5%, white 50%), linear-gradient(to top right, transparent 49.5%, white 50%);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black text-white py-4 px-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold font-serif">Arion's Adventures</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#tours" class="nav-link">Tours</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6">Discover Antigua & Barbuda</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">Experience the pristine beaches and rich culture with Arion's exclusive adventures</p>
+            <a href="#tours" class="btn-primary py-3 px-8 rounded-full text-lg font-semibold inline-block transition-all hover:shadow-xl">Explore Tours</a>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section id="tours" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-serif font-bold mb-4">Our Signature Tours</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Tour 1 -->
+                <div class="tour-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/Banner.jpg" alt="Beach Tour" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Beach Paradise Tour</h3>
+                        <p class="text-gray-600 mb-4">Explore the 365 beaches of Antigua, one for each day of the year.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$120/person</span>
+                            <button class="btn-primary py-2 px-6 rounded-full text-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tour 2 -->
+                <div class="tour-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/Nelsons.jpg" alt="Historic Tour" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Historic Nelson's Dockyard</h3>
+                        <p class="text-gray-600 mb-4">Step back in time at this UNESCO World Heritage site.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$85/person</span>
+                            <button class="btn-primary py-2 px-6 rounded-full text-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tour 3 -->
+                <div class="tour-card bg-gray-100 rounded-lg overflow-hidden shadow-md transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <img src="images/Barbuda.jpg" alt="Island Tour" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif font-bold mb-2">Barbuda Day Trip</h3>
+                        <p class="text-gray-600 mb-4">Discover the untouched beauty of Barbuda with its pink sand beaches.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$250/person</span>
+                            <button class="btn-primary py-2 px-6 rounded-full text-sm">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="section-divider"></div>
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <h2 class="text-4xl font-serif font-bold mb-6">About Arion's Adventures</h2>
+                    <p class="text-lg mb-6">Founded in 2010, Arion's Adventures has been providing unforgettable experiences in Antigua and Barbuda for over a decade.</p>
+                    <p class="text-lg mb-6">Our team of local experts knows every hidden gem and secret spot that makes these islands so special.</p>
+                    <p class="text-lg">We're committed to sustainable tourism that benefits both our visitors and the local community.</p>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <img src="images/Eclipse.jpg" alt="About Us" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <div class="section-divider"></div>
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-serif font-bold mb-4">What Our Guests Say</h2>
+                <div class="w-24 h-1 bg-black mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"The Beach Paradise Tour was absolutely incredible! Our guide knew all the best spots away from the crowds."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/1" alt="Sarah J." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <p class="text-sm text-gray-500">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Nelson's Dockyard tour was so informative. We learned so much about Caribbean history in such a beautiful setting."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/2" alt="Michael T." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <p class="text-sm text-gray-500">London, UK</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 p-8 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                            <i data-feather="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Barbuda was like a dream! The pink sand beach was even more beautiful than we imagined. Worth every penny."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="http://static.photos/people/200x200/3" alt="Lisa & David" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Lisa & David</h4>
+                            <p class="text-sm text-gray-500">Toronto, Canada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Contact Section -->
+    <div class="section-divider"></div>
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+                    <h2 class="text-4xl font-serif font-bold mb-6">Get In Touch</h2>
+                    <p class="text-lg mb-8">Ready to book your Antigua & Barbuda adventure? Contact us today!</p>
+                    
+                    <div class="mb-6 flex items-start">
+                        <i data-feather="map-pin" class="w-6 h-6 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Our Office</h4>
+                            <p class="text-gray-600">Hatton , St. John's, Antigua</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <i data-feather="phone" class="w-6 h-6 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Call Us</h4>
+                            <p class="text-gray-600">+1 (268) 783-3386</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6 flex items-start">
+                        <i data-feather="mail" class="w-6 h-6 mr-4 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-lg mb-1">Email Us</h4>
+                            <p class="text-gray-600">arionsadventure@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="md:w-1/2" data-aos="fade-left">
+        <form action="https://formspree.io/f/mjkezzkd" method="POST" class="bg-white p-8 rounded-lg shadow-lg">
+          
+          <!-- Hidden subject -->
+          <input type="hidden" name="_subject" value="New Booking Request from Arion's Adventures">
+          
+          <div class="mb-6">
+            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black">
+          </div>
+          
+          <div class="mb-6">
+            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black">
+          </div>
+          
+          <div class="mb-6">
+            <label for="tour" class="block text-gray-700 font-medium mb-2">Tour Interest</label>
+            <select id="tour" name="tour" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black">
+              <option value="">Select a tour</option>
+              <option value="Beach Paradise Tour">Beach Paradise Tour</option>
+              <option value="Historic Nelson's Dockyard">Historic Nelson's Dockyard</option>
+              <option value="Barbuda Day Trip">Barbuda Day Trip</option>
+              <option value="Custom Tour">Custom Tour</option>
+            </select>
+          </div>
+          
+          <div class="mb-6">
+            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+          </div>
+          
+          <button type="submit"
+            class="btn-primary py-3 px-8 rounded-full font-semibold w-full transition-all hover:shadow-xl">
+            Send Message
+          </button>
+        </form>
+
+                </div>
+
+                         
+                
+        
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-serif font-bold mb-4">Arion's Adventures</h3>
+                    <p class="text-gray-400">Discover the beauty of Antigua & Barbuda</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="facebook" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="instagram" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i data-feather="twitter" class="w-6 h-6"></i>
+                    </a>
+                </div>
+                
+                <div class="text-gray-400 text-sm">
+                    <p>&copy; 2023 Arion's Adventures. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        feather.replace();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('.hidden.md\\:flex');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            mobileMenu.classList.toggle('flex-col');
+            mobileMenu.classList.toggle('absolute');
+            mobileMenu.classList.toggle('top-16');
+            mobileMenu.classList.toggle('left-0');
+            mobileMenu.classList.toggle('right-0');
+            mobileMenu.classList.toggle('bg-black');
+            mobileMenu.classList.toggle('p-6');
+            mobileMenu.classList.toggle('space-y-4');
+            mobileMenu.classList.toggle('space-x-0');
+        });
+    </script>
+</body>
+</html>
