@@ -82,24 +82,26 @@
 
 <body class="overflow-x-hidden">
     
-    <!-- Navigation -->
-   <nav class="fixed w-full z-50 bg-black text-white py-4 shadow-lg">
-      <div class="max-w-screen-xl mx-auto flex justify-between items-center">
-        
-            <div class="text-2xl font-bold font-Century Gothic">Arion's Adventures</div>
-            <div class="hidden md:flex space-x-8">
+<!-- Navigation -->
+<nav class="fixed inset-x-0 top-0 z-50 bg-black text-white shadow-lg">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <div class="text-2xl font-bold">Arion's Adventures</div>
 
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#tours" class="nav-link">Tours</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="md:hidden">
-                <i data-feather="menu"></i>
-            </button>
-        </div>
-    </nav>
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex space-x-6">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#tours" class="nav-link">Tours</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Mobile Button -->
+    <button class="md:hidden">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section flex items-center justify-center text-white">
@@ -455,6 +457,7 @@
     </script>
 </body>
 </html>
+
 
 
 
